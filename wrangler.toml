@@ -1,0 +1,19 @@
+name = "lostark-server-status"
+type = "javascript"
+zone_id = ""
+account_id = "9b4e8a5306252de7d3ebd878e5e80e27"
+route = ""
+workers_dev = true
+compatibility_date = "2022-02-16"
+
+kv_namespaces = [ 
+    { binding = "historyKv", preview_id = "2c9c6582ae5943fdaf6933eccbaecd03", id = "8e6ddeae559f4fd78ef0a1fd1cf0a42b" }
+]
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
